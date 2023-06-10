@@ -29,7 +29,7 @@
 |3   |Banker's Algorithm| [code](problems/bankers.c)          |  
 
 ## Memory Allocation
-   |Sno:| allocation |  Code          |
+   |Sno:| allocation Method  |  Code          |
 |----| ------------- | ------------- |
 |1   | First Fit | [code](memoryAllocation/ff.c)          |  
 
