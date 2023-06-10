@@ -26,7 +26,10 @@
 |----| ------------- | ------------- |
 |1   | Producer Consumer Problem| [code](problems/producerConsumer.c)          |  
 |2   |Reader Writers problem| [code](problems/readerWriters.c)          |
-  
+|3   |Banker's Algorithm| [code](problems/bankers.c)          |  
 
-
+## Memory Allocation
+   |Sno:| allocation |  Code          |
+|----| ------------- | ------------- |
+|1   | First Fit | [code](memoryAllocation/ff.c)          |  
 
