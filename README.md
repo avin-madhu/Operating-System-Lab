@@ -31,5 +31,5 @@
 ## Memory Allocation
    |Sno:| allocation Method  |  Code          |
 |----| ------------- | ------------- |
-|1   | First Fit | [code](memoryAllocation/ff.c)          |  
+|1   | First Fit | [code](alloc/ff.c)          |  
 
