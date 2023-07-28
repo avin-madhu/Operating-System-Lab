@@ -33,3 +33,8 @@
 |----| ------------- | ------------- |
 |1   | First Fit | [code](alloc/ff.c)          |  
 
+## Page replacement Algorithms
+   |Sno:| Replacement Algorithm   |  Code          |
+|----| ------------- | ------------- |
+|1   | First in First out | [code](PageRep/fifo.c)          |  
+
