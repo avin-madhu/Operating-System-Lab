@@ -37,5 +37,22 @@
    |Sno:| Replacement Algorithm   |  Code          |
 |----| ------------- | ------------- |
 |1   | First in First out | [code](pageRep/fifo.c)          |  
-|1   | First in First out | [code](pageRep/lru.c)          | 
+|2   | LRU (Wrong) | [code](pageRep/lru.c)          |
+
+## Memory Allocation Algorithms
+   |Sno:| Allocation Algorithm   |  Code          |
+|----| ------------- | ------------- |
+|1   | Sequential | [code](fileallocation/seq.c)          |  
+|2   | Indexed | [code](fileallocation/indexed.c)          | 
+|3   | Linked | [code](fileallocation/linked.c)          |
+
+
+## Disk Scheduling Algorithms
+   |Sno:| Scheduling Algorithm   |  Code          |
+|----| ------------- | ------------- |
+|1   | FCFS | [code](disk/fifo.c)          |  
+|2   | SCAN (Wrong) | [code](disk/scan.c)          | 
+|3   | C SCAN  | [code](disk/mycscan.c)          | 
+
+
 
