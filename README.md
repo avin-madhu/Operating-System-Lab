@@ -37,4 +37,5 @@
    |Sno:| Replacement Algorithm   |  Code          |
 |----| ------------- | ------------- |
 |1   | First in First out | [code](pageRep/fifo.c)          |  
+|1   | First in First out | [code](pageRep/lru.c)          | 
 
