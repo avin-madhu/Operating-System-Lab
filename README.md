@@ -39,7 +39,7 @@
 |1   | First in First out | [code](pageRep/fifo.c)          |  
 |2   | LRU  | [code](pageRep/lru.c)          |
 
-## Memory Allocation Algorithms
+## File Allocation Algorithms
    |Sno:| Allocation Algorithm   |  Code          |
 |----| ------------- | ------------- |
 |1   | Sequential | [code](fileallocation/seq.c)          |  
