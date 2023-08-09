@@ -1,5 +1,5 @@
 #include <stdio.h>
-int fragments[10];
+
 void firstFit(int blockSize[],int m,int processSize[],int n)
 {
    int allocated[10];
@@ -16,9 +16,11 @@ void firstFit(int blockSize[],int m,int processSize[],int n)
          if(blockSize[j] >= processSize[i])
          {
             allocated[i] = j;
+            printf("%d - %d = ",blockSize[j],processSize[i]);
             blockSize[j] -= processSize[i];
-            fragments[j] = blockSize[j];
+            printf("%d\n",blockSize[j]);
             break;
+
          }
       }
    }
@@ -35,7 +37,6 @@ void firstFit(int blockSize[],int m,int processSize[],int n)
           printf("%d\n",allocated[i]+1);
       }
    }
-
 }
 
 
@@ -48,7 +49,6 @@ int main()
     for(int i=0; i<m; i++)
     {
       scanf("%d",&blockSize[i]);
-      fragments[i]=blockSize[i];
     }
     printf("Enter the number of processes: ");
     scanf("%d",&n);

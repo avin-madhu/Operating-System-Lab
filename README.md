@@ -32,6 +32,8 @@
    |Sno:| allocation Method  |  Code          |
 |----| ------------- | ------------- |
 |1   | First Fit | [code](alloc/ff.c)          |  
+|2   | Best Fit | [code](alloc/bf.c)          |  
+|3   | Worst Fit | [code](alloc/wf.c)          |  
 
 ## Page replacement Algorithms
    |Sno:| Replacement Algorithm   |  Code          |
