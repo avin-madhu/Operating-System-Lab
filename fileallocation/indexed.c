@@ -7,8 +7,8 @@ int main()
     scanf("%d", &n);
     for(int i = 0; i < n; i++)
     {
-        printf("Enter the starting block and size of file-%d",i+1);
-        scanf("%d %d", &sb[i], &s[i]);
+        printf("Enter the starting block of file-%d",i+1);
+        scanf("%d ", &sb[i]);
         printf("Enter the blocks occupied by file-%d",i+1);
         scanf("%d",&m[i]);
         printf("Enter the blocks of file-%d",i+1);
@@ -33,5 +33,5 @@ int main()
     {
         printf("%d ",b[x-1][j]);
     }
-
+    
 }

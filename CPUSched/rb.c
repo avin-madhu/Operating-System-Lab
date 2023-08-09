@@ -17,7 +17,7 @@ int main()
     scanf("%d",&q);
     for(int i=0,time=0;remain!=0;)
     {
-         if(rt[i]<=q && rt[i]>0)
+         if(rt[i]<=q && rt[i]>0)// still quantum time left
          {
             time+=rt[i];
             rt[i]=0;
@@ -28,13 +28,14 @@ int main()
             rt[i]-=q;
             time+=q;
          }
-         if(rt[i]==0&&flag==1)
+         if(rt[i]==0&&flag==1)// completed execution of a process
          {
             remain--;
             sumWait+=time-at[i]-bt[i];
             sumturnAroundTime+=time-at[i];
             flag=0;
          }
+
          if(i==n-1)
          {
             i=0;

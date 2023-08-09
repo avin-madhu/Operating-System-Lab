@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 struct file
 {
     char fname[10];

@@ -17,7 +17,7 @@ int main()
      scanf("%d",&block[i]);
    }
 
-   int smallest = block[0];
+   int worst = block[0];
 
    printf("Enter the number of data: ");
    scanf("%d",&nd);
@@ -30,20 +30,12 @@ int main()
 
    for(int i=0;i<nd;i++)
    {
-      for(int j=0;j<nb;j++)
-      {
-        if(allocated[i]!=1)
-        {
-            int k=0;
-            while(block[k]<smallest&&k<=nb)
-            {
-               smallest = block[k];
-               k++;
-            }
-            
-            
-
-        }
-      }
+     for(int j=0;j<nb;j++)
+     {
+         //finding the worst fit
+         
+     }
    }
+
+   
 }

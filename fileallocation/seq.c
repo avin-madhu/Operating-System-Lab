@@ -35,6 +35,4 @@ int main()
         printf("%d ",c[x-1][i]);
     }
 
-
-
 }

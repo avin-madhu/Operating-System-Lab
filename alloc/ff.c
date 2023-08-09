@@ -1,55 +1,62 @@
 #include <stdio.h>
+int fragments[10];
+void firstFit(int blockSize[],int m,int processSize[],int n)
+{
+   int allocated[10];
+
+   for(int i = 0; i <n;i++)
+   {
+      allocated[i] = -1;
+   }
+
+   for(int i=0;i<n;i++)
+   {
+      for(int j = 0; j <m; j++)
+      {
+         if(blockSize[j] >= processSize[i])
+         {
+            allocated[i] = j;
+            blockSize[j] -= processSize[i];
+            fragments[j] = blockSize[j];
+            break;
+         }
+      }
+   }
+
+   printf("\nProcess\t\tdataSize\t\tallocated\n");
+   for(int i = 0; i <n;i++)
+   {
+      printf("%d\t\t%d\t\t\t",i+1,processSize[i]);
+      if(allocated[i]==-1)
+      {
+         printf("Not allocated\n");
+      }
+      else{
+          printf("%d\n",allocated[i]+1);
+      }
+   }
+
+}
+
+
 int main()
 {
-   int block[50], //for storing the block size
-       data[50], // for storing the data size
-       nb,nd, // for storing the number of data and blocks respectivey 
-       temp,  // for storing the fragment temporarily 
-       b_order[50], // for storing the order of allocation of blocks
-       fragments[50]; // for storing the fragment
-
-   printf("Enter the number of blocks: ");
-   scanf("%d",&nb);
-   printf("Enter the block Sizes: \n");
-   for(int i=0;i<nb;i++)
-   {
-     printf("Block %d: ",i+1);
-     scanf("%d",&block[i]);
-   }
-
-   int allocated[50]; // for checking wether a data is allocated or not.
-
-   printf("Enter the number of data: ");
-   scanf("%d",&nd);
-   printf("Enter the data Sizes: \n");
-   for(int i=0;i<nd;i++)
-   {
-     printf("Data %d: ",i+1);
-     scanf("%d",&data[i]);
-   }
-
-   for(int i=0;i<nd;i++)
-   {
-     for(int j=0;j<nb;j++)
-     {
-        if(allocated[i]!=1)
-        {
-           temp = block[j]-data[i];
-           if(temp>=0)
-           {
-              b_order[i] = j;
-              allocated[b_order[i]] = 1;
-           }
-        }
-     }
-     fragments[i] = temp;
-   }
-
-   printf("\ndataNo:\tDataSize:\tAllocated In\tBlockSize:\tfragments");
-
-   for(int i=0;i<nb;i++)
-   {
-      printf("\n%d.\t%dkb\t\tBlock:%d\t\t%dkb\t\t%dkb",i+1,data[i],b_order[i]+1,block[b_order[i]],fragments[i]);
-   }   
+    int m,n,blockSize[10],ProcessSize[10];
+    printf("Enter the number of Blocks: ");
+    scanf("%d",&m);
+    printf("Enter the Block sizes of each: ");
+    for(int i=0; i<m; i++)
+    {
+      scanf("%d",&blockSize[i]);
+      fragments[i]=blockSize[i];
+    }
+    printf("Enter the number of processes: ");
+    scanf("%d",&n);
+    printf("Enter the Process size of each: ");
+    for(int i=0; i<n; i++)
+    {
+      scanf("%d",&ProcessSize[i]);
+    }
+    firstFit(blockSize,m,ProcessSize,n);
 
 }
