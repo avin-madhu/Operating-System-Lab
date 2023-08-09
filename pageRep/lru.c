@@ -1,70 +1,69 @@
-#include <stdio.h>
-int main()
+#include<stdio.h>
+int n,rs[30],f,m[10],count=0,pf=0,least[10],flag,temp,pos,i,j,k;
+void main()
 {
-    int n,rs[30],f,m[10],count[10],flag[30],next=0,min=0,pf=0;
-    printf("Enter the length refrence string: ");
+    printf("\nEnter the length of the page string:");
     scanf("%d",&n);
-    printf("Enter the reference string: ");
-    for(int i=0; i<n; i++)
-    {
-      scanf("%d",&rs[i]);
-      flag[i]=0;
-    }
-    printf("Enter the number of frames: ");
+    printf("\nEnter the reference page string:");
+    for(int i=0;i<n;i++)
+        scanf("%d",&rs[i]);
+    printf("\nEnter the number of frames:");
     scanf("%d",&f);
-    for(int i=0; i<f; i++) //initialising the frame
-    {
-        count[i]=0;
-        m[i] = -1;
-    }
-    printf("The page replacement process is: \n\n");
-    for(int i=0; i<n; i++)
-    {
-        for(int j=0; j<f; j++) // checking for hit
+    for(int i=0;i<f;i++)//Initialising all frames with -1
+      m[i]=-1;  
+      printf("-----LRU Page Replacement Algorithm is:\n----");
+      for(i=0;i<n;i++)
+      {
+        flag=0;
+        for(j=0;j<f;j++)
         {
-            if(m[j]==rs[i])
+            if(m[j]==rs[i])//Checkimg for hit
             {
-                flag[i]=1;
-                count[j]=next;
-                next++;
-                
+                flag=1;
+                break;
             }
         }
-
-        if(flag[i]==0) // page fault condition
+        if(flag==0)//page fault
         {
-            if(i<f)
+            if(count<f)
             {
-                m[i] = rs[i];
-                count[i]=next;
-                next++;
+                m[count++]=rs[i];
+                pf++;//fill available frames
             }
-            else
-            {
-               min=0;
-               for(int j=1; j<f; j++)
-               {
-                  if(count[min]>count[j])
+            else{
+                for(j=0;j<f;j++)
+                {
+                  least[j]=0;
+                  for(k=i-1;k>=0;k--)
                   {
-                    min=j;
+                    if(m[j]==rs[k]){
+                        least[j]=i-k;
+                        break;
+                    }
                   }
-               }
-               m[min]=rs[i];
-               count[min]=next;
-               next++;
+                }
+                pos=0;
+                for(j=1;j<f;j++){
+                    if(least[j]>least[pos]){
+                        pos=j;//least recently used or with most age among the frames
+                    }
+                }
+                m[pos]=rs[i];//allocating page to frame by overwriting the lest recently used page
+                pf++;
             }
-            pf++;
         }
-        for(int j=0; j<f; j++)
+        for(j=0;j<f;j++)
         {
-            printf("%d\t",m[j]);
+            if(m[j]==-1)
+               printf("\t_");
+            else
+                printf("\t%d",m[j]);
         }
-        if(flag[i]==0)
-        {
-            printf("\t M");
-            printf("\n");
+        if(flag==0){
+            printf("\tMiss");
         }
+        printf("\n");
     }
-    printf("\n\nThe number of page Faults = %d",pf);
-
+     printf("\nThe number of page faults:%d",pf);
+     printf("\nthe number of hits:%d",n-pf);
 }
