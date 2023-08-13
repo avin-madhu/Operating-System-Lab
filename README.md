@@ -40,6 +40,7 @@
 |----| ------------- | ------------- |
 |1   | First in First out | [code](pageRep/fifo.c)          |  
 |2   | LRU  | [code](pageRep/lru.c)          |
+|3  | LFU  | [code](pageRep/lfu.c)          |
 
 ## File Allocation Algorithms
    |Sno:| Allocation Algorithm   |  Code          |
