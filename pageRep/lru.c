@@ -9,15 +9,18 @@ void main()
         scanf("%d",&rs[i]);
     printf("\nEnter the number of frames:");
     scanf("%d",&f);
+
     for(int i=0;i<f;i++)//Initialising all frames with -1
       m[i]=-1;  
+      
       printf("-----LRU Page Replacement Algorithm is:\n----");
+
       for(i=0;i<n;i++)
       {
         flag=0;
         for(j=0;j<f;j++)
         {
-            if(m[j]==rs[i])//Checkimg for hit
+            if(m[j]==rs[i])//hit
             {
                 flag=1;
                 break;
