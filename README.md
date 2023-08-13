@@ -1,4 +1,4 @@
-<h1 align="center"> OPERATING SYSTEMS<h1>
+im<h1 align="center"> OPERATING SYSTEMS<h1>
   
 <h2 align="center">KTU S4 LAB 2023<h2>
   
@@ -54,7 +54,7 @@
    |Sno:| Scheduling Algorithm   |  Code          |
 |----| ------------- | ------------- |
 |1   | FCFS | [code](disk/fifo.c)          |  
-|2   | SCAN (Wrong) | [code](disk/scan.c)          | 
+|2   | SCAN  | [code](disk/scan.c)          | 
 |3   | C SCAN  | [code](disk/mycscan.c)          | 
 
 
