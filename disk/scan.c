@@ -15,7 +15,8 @@ void main()
     scanf("%d",&size);
     printf("Enter the direction to move first from the initial head position(high=1,low=0):");
     scanf("%d",&move);
-    for(int i=1;i<n;i++){//Bubble sort
+    for(int i=1;i<n;i++) //Bubble sort
+    {
         for(int j=0;j<n-i;j++)
         {
              if(rq[j]>rq[j+1]){
