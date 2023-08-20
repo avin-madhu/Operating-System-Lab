@@ -1,4 +1,4 @@
-// shell program to swap to values
+# shell program to swap to values
 
 echo -n "Enter the value of A: "
 read a

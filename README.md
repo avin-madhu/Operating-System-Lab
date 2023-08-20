@@ -12,6 +12,14 @@ im<h1 align="center"> OPERATING SYSTEMS<h1>
 |4   | Odd or Even   | [code](shell/shell4.sh)          | 
 |5   | Sum of three numbers  | [code](shell/shell5.sh)         |
   
+## System Calls 
+  
+|Sno:| Program    |  Code          |
+|----| ------------- | ------------- |
+|1   | Fork() System call demonstration | [code](systemcalls/forkSystemCall.c)          |  
+|2   |Odd and number Even sum using fork| [code](systemcalls/OddorEven.c)          |
+
+
 ## CPU Scheduling Algorithms
   
   |Sno:| Scheduling Method    |  Code          |

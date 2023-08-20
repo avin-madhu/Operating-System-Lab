@@ -2,6 +2,7 @@
 #define max 10
 int main()
 {
+   
    int bt[max],at[max],wt[max],tat[max],twt=0,ttat=0,temp[max],n;
    printf("Enter the number of processes: ");
    scanf("%d",&n);
@@ -17,7 +18,6 @@ int main()
       printf("\nprocess - %d: ",i+1);
       scanf("%d",&at[i]);
    }
-
 
    printf("PR\tBT\tAT\tWT\tTAT\n");
     temp[0] =0;
@@ -38,6 +38,5 @@ int main()
 
    printf("\nAverage waiting Time: %f",awt);
    printf("\nAverage turn Around time: %f",atat);
-
 
 }

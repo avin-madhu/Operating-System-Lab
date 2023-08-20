@@ -28,7 +28,7 @@ int main()
     printf("The sum of Even numbers: %d\n",sumEven);
     printf("The child id: %d\n\n",id);
 
-    if(check!=0)//child process
+    if(check!=0)// parent process
     {
         int id = getpid();
         for(int i =0;i<n;i++)

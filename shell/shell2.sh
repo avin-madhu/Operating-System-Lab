@@ -1,7 +1,7 @@
 # Program to find the largest of N numbers
 
 echo -n "Enter N numbers: "
-read nums
+read nums[10]
 
 largest=0
 
